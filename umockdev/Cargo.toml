@@ -1,0 +1,15 @@
+[package]
+name = "umockdev"
+edition = "2021"
+
+[dependencies]
+glib.workspace = true
+glib-sys.workspace = true
+gobject-sys.workspace = true
+libc.workspace = true
+umockdev-sys.path = "sys"
+
+[package.metadata.docs.rs]
+all-features = true
+rustc-args = ["--cfg", "docsrs"]
+rustdoc-args = ["--cfg", "docsrs"]

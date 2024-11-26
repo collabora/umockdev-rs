@@ -1,0 +1,30 @@
+[package]
+name = "umockdev-sys"
+edition = "2021"
+build = "build.rs"
+
+[package.metadata.system-deps.umockdev_1_0]
+name = "umockdev-1.0"
+version = "0"
+
+[package.metadata.docs.rs]
+rustc-args = ["--cfg", "docsrs"]
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+all-features = true
+
+[lib]
+name = "umockdev_sys"
+
+[dependencies]
+glib-sys.workspace = true
+gobject-sys.workspace = true
+libc.workspace = true
+
+[build-dependencies]
+system-deps = "7"
+
+[dev-dependencies]
+shell-words = "1.0.0"
+tempfile = "3"
+
+[features]

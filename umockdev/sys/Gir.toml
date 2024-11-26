@@ -1,0 +1,12 @@
+[options]
+library = "UMockdev"
+version = "1.0"
+min_cfg_version = "1.0"
+target_path = "."
+girs_directories = ["../gir-files/", ".."]
+work_mode = "sys"
+
+external_libraries = [
+    "GLib",
+    "GObject",
+]

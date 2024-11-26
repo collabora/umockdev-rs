@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+
+members = [
+  "umockdev",
+  "umockdev/sys",
+]
+
+exclude = ["gir"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+glib = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main" }
+glib-sys = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main" }
+gobject-sys = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "main" }
+libc = "0.2"
